@@ -1,0 +1,113 @@
+:root {
+  /* Primary */
+
+  --Lime: hsl(61, 70%, 52%);
+  --Red: hsl(4, 69%, 50%);
+
+  /* Neutral */
+
+  --White: hsl(0, 0%, 100%);
+  --Slate100: hsl(202, 86%, 94%);
+  --Slate300: hsl(203, 41%, 72%);
+  --Slate500: hsl(200, 26%, 54%);
+  --Slate700: hsl(200, 24%, 40%);
+  --Slate900: hsl(202, 55%, 16%);
+
+  /* Other variables */
+
+  --input-label-gap: 0.4rem;
+  --fontsize-labels: 0.9rem;
+  --border-radius-inputs: 0.2rem;
+  --inputs-height: 1.6rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: var(--Slate700);
+}
+
+/* We start with the big container*/
+
+.general-container {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  margin: 20px auto;
+  width: 85%;
+  background-color: var(--White);
+}
+
+/* Now give some styles to the sections divided in 5 div elements 
+Calculator-container */
+
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mortgage-title {
+  color: var(--Slate900);
+  margin-bottom: 0.1rem;
+  font-size: 1.2rem;
+}
+
+.clear {
+  border-bottom: 1px solid;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* section2 Amount-container */
+
+.amount-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--input-label-gap);
+}
+
+.mortgage-amount {
+  font-size: var(--fontsize-labels);
+}
+
+.equal-inputs {
+  height: var(--inputs-height);
+  border-radius: var(--border-radius-inputs);
+  border: 1px solid var(--Slate700);
+}
+
+/* section3 Section-Term */
+
+.section-term {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mortgage-plus-interest {
+  display: flex;
+  flex-direction: column;
+  gap: var(--input-label-gap);
+}
+
+/* Style button */
+
+.results-container {
+  align-items: center;
+}
+
+.calculate-repayments {
+  width: 100%;
+  font-size: 1rem;
+  background-color: var(--Lime);
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+  color: var(--Slate900);
+  font-weight: 700;
+  align-self: center;
+}
