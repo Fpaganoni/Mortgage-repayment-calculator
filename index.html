@@ -67,30 +67,44 @@
           </div>
 
           <div class="mortgage-type">
-            <div class="repayment-container">
-              <input type="checkbox" name="repayment" id="repayment-input" />
-              <label for="repayment-input">Repayment</label>
+            <label for="inputs" class="mortgage-type-label"
+              >Mortgage Type</label
+            >
+            <div class="repayment-container container-checks">
+              <input
+                type="checkbox"
+                name="repayment"
+                id="repayment-input"
+                class="inputs-checkbox"
+              />
+              <label for="repayment-input" class="checkboxes">Repayment</label>
             </div>
-            <div class="interest-container">
+
+            <div class="interest-container container-checks">
               <input
                 type="checkbox"
                 name="interest only"
                 id="interest-only-input"
+                class="inputs-checkbox"
               />
-              <label for="interest-only-input">Interest Only</label>
+              <label for="interest-only-input" class="checkboxes"
+                >Interest Only</label
+              >
             </div>
           </div>
 
-          <div class="calculator-sections"></div>
-        </div>
-        <div class="container-calculator-results results-container">
-          <div type="submit" class="calculate-repayments">
-            <img
-              src="/Mortgage-repayment-calculator/assets/images/icon-calculator.svg"
-              alt="calculator"
-            />Calculate Repayments
+          <div class="calculator-sections">
+            <div type="submit" class="calculate-repayments">
+              <img
+                src="/Mortgage-repayment-calculator/assets/images/icon-calculator.svg"
+                alt="calculator"
+                class="calculator-img"
+              />Calculate Repayments
+            </div>
           </div>
         </div>
+
+        <div class="container-calculator-results results-container"></div>
       </div>
     </section>
     <!--

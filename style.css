@@ -18,7 +18,7 @@
   --input-label-gap: 0.4rem;
   --fontsize-labels: 0.9rem;
   --border-radius-inputs: 0.2rem;
-  --inputs-height: 1.6rem;
+  --inputs-height: 2.55rem;
 }
 
 * {
@@ -33,11 +33,13 @@
 
 .general-container {
   width: 100%;
+  max-width: 375px;
   height: 100%;
+  margin: 0 auto;
 }
 
 .container {
-  margin: 20px auto;
+  margin: 30px auto;
   width: 85%;
   background-color: var(--White);
 }
@@ -48,12 +50,12 @@ Calculator-container */
 .calculator-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .mortgage-title {
   color: var(--Slate900);
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.3rem;
   font-size: 1.2rem;
 }
 
@@ -95,7 +97,54 @@ Calculator-container */
   gap: var(--input-label-gap);
 }
 
-/* Style button */
+.mortgage-term,
+.interest-rate {
+  font-size: var(--fontsize-labels);
+}
+
+/* section4 Mortgage-Type*/
+
+.mortgage-type {
+  display: flex;
+  flex-direction: column;
+  gap: var(--input-label-gap);
+}
+
+.container-checks {
+  width: 100%;
+  max-width: 375px;
+  border: 1px solid var(--Slate700);
+  border-radius: var(--border-radius-inputs);
+  padding: 0.6rem;
+  position: relative;
+}
+
+.mortgage-type-label {
+  font-size: var(--fontsize-labels);
+}
+
+.inputs-checkbox {
+  display: none;
+}
+
+.checkboxes {
+  color: var(--Slate900);
+  font-weight: 700;
+  margin-left: 2rem;
+}
+
+.checkboxes::before {
+  content: "";
+  position: absolute;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  border: 2px solid var(--Slate700);
+  left: 0.8rem;
+  top: 12px;
+}
+
+/* section5 Style Button */
 
 .results-container {
   align-items: center;
@@ -106,8 +155,20 @@ Calculator-container */
   font-size: 1rem;
   background-color: var(--Lime);
   border-radius: 1.5rem;
-  padding: 0.5rem;
+  padding: 0.7rem 0;
   color: var(--Slate900);
   font-weight: 700;
-  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  justify-content: center;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 2px 2px 5px var(--Slate900);
+  }
+}
+
+.calculator-img {
+  width: 1.3rem;
 }
