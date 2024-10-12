@@ -15,7 +15,7 @@
 
   /* Other variables */
 
-  --input-label-gap: 0.4rem;
+  --input-label-gap: 0.6rem;
   --fontsize-labels: 0.9rem;
   --border-radius-inputs: 0.2rem;
   --inputs-height: 2.55rem;
@@ -29,28 +29,19 @@
   color: var(--Slate700);
 }
 
-/* We start with the big container*/
-
-.general-container {
-  width: 100%;
-  max-width: 375px;
-  height: 100%;
-  margin: 0 auto;
-}
-
-.container {
-  margin: 30px auto;
-  width: 85%;
-  background-color: var(--White);
-}
-
 /* Now give some styles to the sections divided in 5 div elements 
 Calculator-container */
+
+.general-container {
+  max-width: 375px;
+  margin: 0 auto;
+}
 
 .calculator-container {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  padding: 1.4rem;
 }
 
 .mortgage-title {
@@ -171,4 +162,25 @@ Calculator-container */
 
 .calculator-img {
   width: 1.3rem;
+}
+
+/* Second container - Results */
+
+.results-container {
+  height: 400px;
+  background-color: var(--Slate900);
+}
+
+.results {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.figure-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
