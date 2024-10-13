@@ -8,9 +8,9 @@
 
   --White: hsl(0, 0%, 100%);
   --Slate100: hsl(202, 86%, 94%);
-  --Slate300: hsl(203, 41%, 72%);
+  --Slate300: rgb(154, 190, 213);
   --Slate500: hsl(200, 26%, 54%);
-  --Slate700: hsl(200, 24%, 40%);
+  --Slate700: rgb(78, 110, 126);
   --Slate900: hsl(202, 55%, 16%);
 
   /* Other variables */
@@ -19,6 +19,7 @@
   --fontsize-labels: 0.9rem;
   --border-radius-inputs: 0.2rem;
   --inputs-height: 2.55rem;
+  --border-inputs: 1px solid var(--Slate500);
 }
 
 * {
@@ -29,7 +30,7 @@
   color: var(--Slate700);
 }
 
-/* Now give some styles to the sections divided in 5 div elements 
+/* Now give some styles to the sections divided in 5 div elements
 Calculator-container */
 
 .general-container {
@@ -40,14 +41,14 @@ Calculator-container */
 .calculator-container {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
   padding: 1.4rem;
 }
 
 .mortgage-title {
   color: var(--Slate900);
   margin-bottom: 0.3rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .clear {
@@ -68,10 +69,44 @@ Calculator-container */
   font-size: var(--fontsize-labels);
 }
 
+.input-libra-container {
+  display: flex;
+  border: var(--border-inputs);
+  border-radius: var(--border-radius-inputs);
+
+  &:hover {
+    border: 2px solid var(--Slate900);
+  }
+}
+
+.amount {
+  width: 100%;
+  position: relative;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+
+.libra-img-container {
+  width: 50px;
+  border: none;
+  background-color: var(--Slate100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+svg .libra-path {
+  fill: var(--Slate700);
+}
+
+.libra-img {
+  width: 0.8rem;
+  background-color: var(--Slate100);
+}
+
 .equal-inputs {
   height: var(--inputs-height);
-  border-radius: var(--border-radius-inputs);
-  border: 1px solid var(--Slate700);
 }
 
 /* section3 Section-Term */
@@ -88,7 +123,40 @@ Calculator-container */
   gap: var(--input-label-gap);
 }
 
-.mortgage-term,
+.input-year-container {
+  width: 100%;
+  display: flex;
+  border: var(--border-inputs);
+  border-radius: var(--border-radius-inputs);
+  text-align: center;
+
+  &:hover {
+    border: 2px solid var(--Slate900);
+  }
+}
+
+.term {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+
+.years {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  background-color: var(--Slate100);
+}
+
+.years-title {
+  width: 100%;
+  font-weight: 700;
+  color: var(--Slate700);
+}
+
+.term,
 .interest-rate {
   font-size: var(--fontsize-labels);
 }
@@ -104,7 +172,7 @@ Calculator-container */
 .container-checks {
   width: 100%;
   max-width: 375px;
-  border: 1px solid var(--Slate700);
+  border: var(--border-inputs);
   border-radius: var(--border-radius-inputs);
   padding: 0.6rem;
   position: relative;
@@ -122,17 +190,18 @@ Calculator-container */
   color: var(--Slate900);
   font-weight: 700;
   margin-left: 2rem;
-}
 
-.checkboxes::before {
-  content: "";
-  position: absolute;
-  width: 0.9rem;
-  height: 0.9rem;
-  border-radius: 50%;
-  border: 2px solid var(--Slate700);
-  left: 0.8rem;
-  top: 12px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    border: 2px solid var(--Slate700);
+    left: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 /* section5 Style Button */
@@ -167,20 +236,41 @@ Calculator-container */
 /* Second container - Results */
 
 .results-container {
-  height: 400px;
+  height: 350px;
   background-color: var(--Slate900);
 }
 
 .results {
   width: 85%;
-  margin: 0 auto;
+  height: 100%;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .figure-container {
+  margin-top: 30px;
+}
+
+.illustration-img {
   width: 100%;
+  max-width: 180px;
+}
+
+.show-result {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 0.8rem;
+}
+
+.result-title {
+  color: var(--White);
+}
+
+.result-paragraph {
+  color: var(--Slate500);
+  text-align: center;
+  font-weight: 600;
 }
