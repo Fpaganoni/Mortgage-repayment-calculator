@@ -30,6 +30,9 @@
   color: var(--Slate700);
 }
 
+input {
+  border: none;
+}
 /* Now give some styles to the sections divided in 5 div elements
 Calculator-container */
 
@@ -52,6 +55,7 @@ Calculator-container */
 }
 
 .clear {
+  background-color: var(--White);
   border-bottom: 1px solid;
   cursor: pointer;
   font-size: 0.9rem;
@@ -82,14 +86,12 @@ Calculator-container */
 .amount {
   width: 100%;
   position: relative;
-  border: none;
   outline: none;
   padding-left: 10px;
 }
 
 .libra-img-container {
   width: 50px;
-  border: none;
   background-color: var(--Slate100);
   display: flex;
   align-items: center;
@@ -137,7 +139,6 @@ svg .libra-path {
 
 .term {
   width: 100%;
-  border: none;
   outline: none;
   padding-left: 10px;
 }
@@ -159,6 +160,32 @@ svg .libra-path {
 .term,
 .interest-rate {
   font-size: var(--fontsize-labels);
+}
+
+.interest {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: 10px;
+}
+
+.input-interest-container {
+  display: flex;
+  align-items: center;
+  border: var(--border-inputs);
+
+  &:hover {
+    border: 2px solid var(--Slate900);
+  }
+}
+
+.percentage-container {
+  width: 50px;
+  height: var(--inputs-height);
+  background-color: var(--Slate100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* section4 Mortgage-Type*/

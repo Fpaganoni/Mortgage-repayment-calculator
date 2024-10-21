@@ -23,10 +23,13 @@
   <body>
     <section class="general-container">
       <div class="container">
-        <div class="container-calculator-results calculator-container">
+        <form
+          method="post"
+          class="container-calculator-results calculator-container"
+        >
           <div class="calculator-sections section-title">
             <h4 class="mortgage-title">Mortgage Calculator</h4>
-            <small class="clear">Clear All</small>
+            <input type="reset" value="Clear All" class="clear" />
           </div>
 
           <div class="calculator-sections amount-container">
@@ -83,11 +86,17 @@
               <label for="interest-rate" class="interest-rate"
                 >Interest Rate</label
               >
-              <input
-                type="text"
-                class="interest equal-inputs"
-                id="interest-rate"
-              />
+              <div class="input-interest-container">
+                <input
+                  type="text"
+                  class="interest equal-inputs"
+                  id="interest-rate"
+                />
+
+                <span class="percentage-container">
+                  <h4 class="percentage">%</h4>
+                </span>
+              </div>
             </div>
           </div>
 
@@ -102,6 +111,7 @@
                 id="repayment-input"
                 class="inputs-checkbox"
               />
+
               <label for="repayment-input" class="checkboxes">Repayment</label>
             </div>
 
@@ -112,6 +122,7 @@
                 id="interest-only-input"
                 class="inputs-checkbox"
               />
+
               <label for="interest-only-input" class="checkboxes"
                 >Interest Only</label
               >
@@ -127,7 +138,7 @@
               />Calculate Repayments
             </div>
           </div>
-        </div>
+        </form>
 
         <div class="container-calculator-results results-container">
           <div class="results">
