@@ -13,6 +13,9 @@
   --Slate700: rgb(78, 110, 126);
   --Slate900: hsl(202, 55%, 16%);
 
+  --inputsColorRepayment: white;
+  --inputsColorInterest: #333;
+
   /* Other variables */
 
   --input-label-gap: 0.6rem;
@@ -37,7 +40,7 @@ input {
 Calculator-container */
 
 .general-container {
-  max-width: 375px;
+  max-width: 425px;
   margin: 0 auto;
 }
 
@@ -221,10 +224,12 @@ svg .libra-path {
   &::before {
     content: "";
     position: absolute;
-    width: 0.9rem;
-    height: 0.9rem;
+    background-color: var(--White);
+    border: 3px solid var(--White);
+    outline: 1px solid var(--Slate900);
+    width: 0.6rem;
+    height: 0.6rem;
     border-radius: 50%;
-    border: 2px solid var(--Slate700);
     left: 0.8rem;
     top: 50%;
     transform: translateY(-50%);
@@ -242,7 +247,7 @@ svg .libra-path {
   font-size: 1rem;
   background-color: var(--Lime);
   border-radius: 1.5rem;
-  padding: 0.7rem 0;
+  padding: 0.9rem 0;
   color: var(--Slate900);
   font-weight: 700;
   display: flex;
