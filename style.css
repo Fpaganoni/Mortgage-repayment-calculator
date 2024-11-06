@@ -1,7 +1,8 @@
 :root {
   /* Primary */
 
-  --Lime: hsl(61, 70%, 52%);
+  --Lime: #d7da2f;
+  --Lime-ligth: hsl(61, 70%, 70%, 35%);
   --Red: hsl(4, 69%, 50%);
 
   /* Neutral */
@@ -9,9 +10,9 @@
   --White: hsl(0, 0%, 100%);
   --Slate100: hsl(202, 86%, 94%);
   --Slate300: rgb(154, 190, 213);
-  --Slate500: hsl(200, 26%, 54%);
-  --Slate700: rgb(78, 110, 126);
-  --Slate900: hsl(202, 55%, 16%);
+  --Slate500: #6b94a8;
+  --Slate700: #4e6e7e;
+  --Slate900: #122f3f;
 
   --inputsColorRepayment: white;
   --inputsColorInterest: #333;
@@ -206,6 +207,8 @@ svg .libra-path {
   border-radius: var(--border-radius-inputs);
   padding: 0.6rem;
   position: relative;
+  transition: background-color 0.5s ease;
+  transition: border 0.5s ease;
 }
 
 .mortgage-type-label {
@@ -217,16 +220,44 @@ svg .libra-path {
 }
 
 .checkboxes {
+  display: inline-block;
+  width: 100%;
   color: var(--Slate900);
   font-weight: 700;
   margin-left: 2rem;
+}
+
+.checkbox_interest {
+  --before-white-interest: hsl(0, 0%, 100%);
+  --outline-interest: #6b94a8;
 
   &::before {
     content: "";
     position: absolute;
-    background-color: var(--White);
+    background-color: var(--before-white-interest);
     border: 3px solid var(--White);
-    outline: 1px solid var(--Slate900);
+    outline: 1px solid var(--outline-interest);
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    left: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 3s ease;
+    transition: outline 0.5s ease;
+  }
+}
+
+.checkbox_repayment {
+  --before-white-repayment: #ffffff;
+  --outline-repayment: #6b94a8;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: var(--before-white-repayment);
+    border: 3px solid var(--White);
+    outline: 1px solid var(--outline-repayment);
     width: 0.6rem;
     height: 0.6rem;
     border-radius: 50%;
