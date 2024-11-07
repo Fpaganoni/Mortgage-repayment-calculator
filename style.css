@@ -81,9 +81,10 @@ Calculator-container */
   display: flex;
   border: var(--border-inputs);
   border-radius: var(--border-radius-inputs);
+  cursor: pointer;
 
   &:hover {
-    border: 2px solid var(--Slate900);
+    border: 1.8px solid var(--Slate900);
   }
 }
 
@@ -137,7 +138,7 @@ svg .libra-path {
   text-align: center;
 
   &:hover {
-    border: 2px solid var(--Slate900);
+    border: 1.8px solid var(--Slate900);
   }
 }
 
@@ -179,7 +180,7 @@ svg .libra-path {
   border: var(--border-inputs);
 
   &:hover {
-    border: 2px solid var(--Slate900);
+    border: 1.8px solid var(--Slate900);
   }
 }
 
@@ -207,8 +208,8 @@ svg .libra-path {
   border-radius: var(--border-radius-inputs);
   padding: 0.6rem;
   position: relative;
-  transition: background-color 0.5s ease;
-  transition: border 0.5s ease;
+  background-color: var(--White);
+  transition: all 1s ease;
 }
 
 .mortgage-type-label {
@@ -243,8 +244,7 @@ svg .libra-path {
     left: 0.8rem;
     top: 50%;
     transform: translateY(-50%);
-    transition: background-color 3s ease;
-    transition: outline 0.5s ease;
+    transition: all 1s ease;
   }
 }
 
@@ -264,6 +264,7 @@ svg .libra-path {
     left: 0.8rem;
     top: 50%;
     transform: translateY(-50%);
+    transition: all 1s ease;
   }
 }
 
@@ -271,6 +272,7 @@ svg .libra-path {
 
 .results-container {
   align-items: center;
+  overflow: hidden;
 }
 
 .calculate-repayments {
@@ -336,4 +338,10 @@ svg .libra-path {
   color: var(--Slate500);
   text-align: center;
   font-weight: 600;
+}
+
+/* Results over the term */
+
+.your_results {
+  transform: translate(100%);
 }
