@@ -21,7 +21,7 @@
     <title>Frontend Mentor | Mortgage repayment calculator</title>
   </head>
   <body>
-    <section class="general-container">
+    <main class="general-container">
       <div class="container">
         <form
           method="post"
@@ -147,49 +147,51 @@
           </div>
         </form>
 
-        <div class="container-calculator-results results-container">
-          <div class="results">
-            <figure class="figure-container">
-              <img
-                src="/Mortgage-repayment-calculator/assets/images/illustration-empty.svg"
-                alt="illustration-empty"
-                class="illustration-img"
-              />
-            </figure>
-            <div class="show-result">
-              <h2 class="result-title">Results shown here</h2>
-              <p class="result-paragraph">
-                Complete the form and click “calculate repayments” to see what
-                your monthly repayments would be.
-              </p>
+        <section class="container-calculator-results results-container">
+          <div class="your_result_container_all">
+            <div class="results">
+              <figure class="figure-container">
+                <img
+                  src="/Mortgage-repayment-calculator/assets/images/illustration-empty.svg"
+                  alt="illustration-empty"
+                  class="illustration-img"
+                />
+              </figure>
+              <div class="show-result">
+                <h2 class="result-title">Results shown here</h2>
+                <p class="result-paragraph">
+                  Complete the form and click “calculate repayments” to see what
+                  your monthly repayments would be.
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div class="your_results">
-            <div class="container-title-paragraph">
-              <h2 class="results_title">Your results</h2>
-              <p class="results_paragraph">
-                Your results are shown below based on the information you
-                provided. To adjust the results, edit the form and click
-                “calculate repayments” again.
-              </p>
-              <div class="container_repayments">
-                <div class="monthly_repayment">
-                  <h5 class="monthly_title">Your monthly repayments</h5>
-                  <h1 class="monthly_result">1,797.74</h1>
-                </div>
-                <div class="container_over_term">
-                  <h5 class="monthly_title">
-                    Total you'll repay over the term
-                  </h5>
-                  <span class="over_term_result">539,3222.94</span>
+            <div class="your_results">
+              <div class="container-title-paragraph">
+                <h2 class="results_title">Your results</h2>
+                <p class="results_paragraph">
+                  Your results are shown below based on the information you
+                  provided. To adjust the results, edit the form and click
+                  “calculate repayments” again.
+                </p>
+                <div class="container_repayments">
+                  <div class="monthly_repayment">
+                    <h5 class="monthly_title">Your monthly repayments</h5>
+                    <span class="monthly_result">£1,797.74</span>
+                  </div>
+                  <div class="container_over_term">
+                    <h5 class="monthly_title">
+                      Total you'll repay over the term
+                    </h5>
+                    <span class="over_term_result">£539,3222.94</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
-    </section>
+    </main>
 
     <!--
   Your monthly repayments
