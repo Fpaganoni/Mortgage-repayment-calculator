@@ -21,10 +21,11 @@
   /* Other variables */
 
   --input-label-gap: 0.6rem;
-  --fontsize-labels: 0.9rem;
+  --fontsize-labels: 1rem;
   --border-radius-inputs: 0.2rem;
   --inputs-height: 2.55rem;
   --border-inputs: 1px solid var(--Slate500);
+  --padding-left-inputs: 1rem;
 }
 
 * {
@@ -38,6 +39,11 @@
 input {
   border: none;
 }
+
+body {
+  background-color: var(--Slate100);
+}
+
 /* Now give some styles to the sections divided in 5 div elements
 Calculator-container */
 
@@ -49,6 +55,7 @@ Calculator-container */
 .calculator-container {
   display: flex;
   flex-direction: column;
+  background-color: var(--White);
   gap: 1rem;
   padding: 1.4rem;
 }
@@ -93,7 +100,7 @@ Calculator-container */
   width: 100%;
   position: relative;
   outline: none;
-  padding-left: 10px;
+  padding-left: var(--padding-left-inputs);
 }
 
 .libra-img-container {
@@ -115,6 +122,11 @@ svg .libra-path {
 
 .equal-inputs {
   height: var(--inputs-height);
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--Slate900);
+  letter-spacing: 0.3px;
+  font-size: var(--fontsize-labels);
 }
 
 /* section3 Section-Term */
@@ -146,7 +158,7 @@ svg .libra-path {
 .term {
   width: 100%;
   outline: none;
-  padding-left: 10px;
+  padding-left: var(--padding-left-inputs);
 }
 
 .years {
@@ -172,7 +184,7 @@ svg .libra-path {
   border: none;
   width: 100%;
   outline: none;
-  padding-left: 10px;
+  padding-left: var(--padding-left-inputs);
 }
 
 .input-interest-container {
@@ -210,7 +222,7 @@ svg .libra-path {
   padding: 0.6rem;
   position: relative;
   background-color: var(--White);
-  transition: all 1s ease;
+  transition: all 0.7s ease;
 }
 
 .mortgage-type-label {
@@ -227,6 +239,7 @@ svg .libra-path {
   color: var(--Slate900);
   font-weight: 700;
   margin-left: 2rem;
+  cursor: pointer;
 }
 
 .checkbox_interest {
@@ -245,7 +258,7 @@ svg .libra-path {
     left: 0.8rem;
     top: 50%;
     transform: translateY(-50%);
-    transition: all 1s ease;
+    transition: all 0.7s ease;
   }
 }
 
@@ -265,15 +278,15 @@ svg .libra-path {
     left: 0.8rem;
     top: 50%;
     transform: translateY(-50%);
-    transition: all 1s ease;
+    transition: all 0.7s ease;
   }
 }
 
 /* section5 Style Button */
 
 .results-container {
-  align-items: center;
   overflow: hidden;
+  background-color: var(--Slate900);
 }
 
 .calculate-repayments {
@@ -289,9 +302,12 @@ svg .libra-path {
   gap: 0.4rem;
   justify-content: center;
   cursor: pointer;
+  transition: box-shadow 1s ease;
+  transition: background-color 1s ease;
 
   &:hover {
     box-shadow: 2px 2px 5px var(--Slate900);
+    background-color: hsl(61, 70%, 70%, 90%);
   }
 }
 
@@ -301,21 +317,19 @@ svg .libra-path {
 
 /* Second container - Results */
 
-/* .results-container {
-  background-color: var(--Slate900);
-} */
-
 .your_result_container_all {
+  display: flex;
   width: 100%;
   height: 100%;
   background-color: var(--Slate900);
   border: 1px solid var(--Slate900);
+  transform: translate(-100%);
 }
 
 .results {
-  width: 85%;
+  min-width: 100%;
   height: 100%;
-  margin: 20px auto;
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -323,6 +337,7 @@ svg .libra-path {
 
 .figure-container {
   margin-top: 30px;
+  margin-bottom: 5px;
 }
 
 .illustration-img {
@@ -334,7 +349,7 @@ svg .libra-path {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1rem;
 }
 
 .result-title {
@@ -350,7 +365,7 @@ svg .libra-path {
 /* Results over the term */
 
 .your_results {
-  width: 85%;
+  min-width: 100%;
   height: 100%;
   margin: 20px auto;
 }
@@ -358,7 +373,8 @@ svg .libra-path {
 .container-title-paragraph {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 85%;
+  margin: 0.5rem auto;
 }
 
 .results_title {
@@ -368,7 +384,10 @@ svg .libra-path {
 
 .results_paragraph {
   color: var(--Slate500);
-  margin-bottom: 0.9rem;
+  margin-bottom: 1.4rem;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 500;
 }
 
 .container_repayments {
@@ -377,8 +396,8 @@ svg .libra-path {
   flex-direction: column;
   background-color: var(--Slate1000);
   padding: 0.9rem;
-  border-top: 5px solid var(--Lime);
-  border-radius: 1rem;
+  border-top: 4px solid var(--Lime);
+  border-radius: 0.4rem;
 }
 
 .monthly_repayment {
@@ -410,4 +429,54 @@ svg .libra-path {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+}
+
+/* Media querys for 768px layout */
+
+@media (min-width: 768px) {
+  .general-container {
+    max-width: 768px;
+  }
+
+  .container {
+    display: flex;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    background-color: var(--White);
+  }
+
+  .container-calculator-results {
+    width: 50%;
+    border-radius: 1rem;
+  }
+
+  .calculator-container {
+    padding: 1.4rem 2rem;
+  }
+
+  .results-container {
+    border-radius: 0rem 1rem 1rem 5rem;
+  }
+
+  .your_results {
+    margin: 0;
+  }
+
+  .container-title-paragraph {
+    height: 100%;
+    margin: 5rem auto;
+  }
+
+  .results_title {
+    align-self: center;
+  }
+
+  .results {
+    margin: 0;
+    justify-content: center;
+  }
+
+  .figure-container {
+    margin-top: 0;
+  }
 }
