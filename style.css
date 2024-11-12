@@ -68,7 +68,7 @@ Calculator-container */
 
 .clear {
   background-color: var(--White);
-  border-bottom: 1px solid;
+  text-decoration: underline;
   cursor: pointer;
   font-size: 0.9rem;
 }
@@ -460,11 +460,13 @@ svg .libra-path {
 
   .your_results {
     margin: 0;
+    padding: 0 1rem;
   }
 
   .container-title-paragraph {
     height: 100%;
     margin: 5rem auto;
+    gap: 0.2rem;
   }
 
   .results_title {
@@ -478,5 +480,83 @@ svg .libra-path {
 
   .figure-container {
     margin-top: 0;
+  }
+}
+
+/* Media querys for 1024px layout*/
+
+@media (min-width: 1024px) {
+  .general-container {
+    max-width: 850px;
+    height: 530px;
+    max-height: max-content;
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  .section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .mortgage-title {
+    margin-bottom: 0.6rem;
+    font-size: 1.2rem;
+  }
+
+  .clear {
+    font-size: 0.8rem;
+  }
+
+  .mortgage-amount,
+  .mortgage-term,
+  .interest-rate,
+  .mortgage-type-label {
+    font-size: 0.9rem;
+  }
+
+  .section-term {
+    flex-direction: row;
+  }
+
+  .calculator-container {
+    justify-content: space-evenly;
+  }
+
+  .calculate_repayments_container {
+    width: 80%;
+  }
+
+  .container-title-paragraph {
+    margin: 2.2rem auto;
+  }
+
+  .results_title {
+    align-self: start;
+    font-size: 1.3rem;
+  }
+
+  .results_paragraph {
+    font-size: 0.8rem;
+  }
+
+  .container_repayments {
+    padding: 0.9rem 1.1rem;
+  }
+
+  .monthly_repayment {
+    padding: 0.8rem 0 1rem;
+  }
+
+  .monthly_result {
+    font-size: 2.8rem;
+  }
+
+  .monthly_title {
+    font-size: 0.8rem;
+    font-weight: 500;
   }
 }
