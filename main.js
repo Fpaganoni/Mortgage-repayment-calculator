@@ -1,10 +1,10 @@
 /* Declare variables to use */
 
-let button = document.querySelector(".calculate-repayments"),
-  interestContainer = document.querySelector(".interest-container"),
-  inputsCheckbox = document.querySelector(".inputs-checkbox");
+// let button = document.querySelector(".calculate-repayments"),
+//   interestContainer = document.querySelector(".interest-container"),
+//   inputsCheckbox = document.querySelector(".inputs-checkbox");
 
-button.addEventListener("click", () => {});
+// button.addEventListener("click", () => {});
 
 /* Function for REPAYMENTS input */
 

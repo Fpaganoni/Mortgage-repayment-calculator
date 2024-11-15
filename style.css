@@ -3,12 +3,12 @@
 
   --Lime: #d7da2f;
   --Lime-ligth: hsl(61, 70%, 70%, 35%);
-  --Red: hsl(4, 69%, 50%);
+  --Red: #d73328;
 
   /* Neutral */
 
   --White: hsl(0, 0%, 100%);
-  --Slate100: hsl(202, 86%, 94%);
+  --Slate100: #e3f3fd;
   --Slate300: rgb(154, 190, 213);
   --Slate500: #6b94a8;
   --Slate700: #4e6e7e;
@@ -42,6 +42,17 @@ input {
 
 body {
   background-color: var(--Slate100);
+}
+
+path {
+  fill: red;
+}
+
+.required {
+  display: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--Red);
 }
 
 /* Now give some styles to the sections divided in 5 div elements
@@ -90,10 +101,6 @@ Calculator-container */
   border: var(--border-inputs);
   border-radius: var(--border-radius-inputs);
   cursor: pointer;
-
-  &:hover {
-    border: 1.8px solid var(--Slate900);
-  }
 }
 
 .amount {
@@ -149,10 +156,6 @@ svg .libra-path {
   border: var(--border-inputs);
   border-radius: var(--border-radius-inputs);
   text-align: center;
-
-  &:hover {
-    border: 1.8px solid var(--Slate900);
-  }
 }
 
 .term {
@@ -191,10 +194,6 @@ svg .libra-path {
   display: flex;
   align-items: center;
   border: var(--border-inputs);
-
-  &:hover {
-    border: 1.8px solid var(--Slate900);
-  }
 }
 
 .percentage-container {
@@ -222,7 +221,7 @@ svg .libra-path {
   padding: 0.6rem;
   position: relative;
   background-color: var(--White);
-  transition: all 0.7s ease;
+  transition: all 0.4s ease;
 }
 
 .mortgage-type-label {
@@ -258,7 +257,7 @@ svg .libra-path {
     left: 0.8rem;
     top: 50%;
     transform: translateY(-50%);
-    transition: all 0.7s ease;
+    transition: all 0.4s ease;
   }
 }
 
@@ -278,7 +277,7 @@ svg .libra-path {
     left: 0.8rem;
     top: 50%;
     transform: translateY(-50%);
-    transition: all 0.7s ease;
+    transition: all 0.4s ease;
   }
 }
 
@@ -303,10 +302,9 @@ svg .libra-path {
   justify-content: center;
   cursor: pointer;
   transition: box-shadow 1s ease;
-  transition: background-color 1s ease;
+  transition: background-color 0.3s ease;
 
   &:hover {
-    box-shadow: 2px 2px 5px var(--Slate900);
     background-color: hsl(61, 70%, 70%, 90%);
   }
 }
@@ -323,7 +321,7 @@ svg .libra-path {
   height: 100%;
   background-color: var(--Slate900);
   border: 1px solid var(--Slate900);
-  transform: translate(-100%);
+  /* transform: translate(-100%); */
 }
 
 .results {
@@ -511,10 +509,18 @@ svg .libra-path {
     font-size: 0.8rem;
   }
 
+  .mortgage-plus-interest {
+    width: 50%;
+  }
+
   .mortgage-amount,
   .mortgage-term,
   .interest-rate,
   .mortgage-type-label {
+    font-size: 0.9rem;
+  }
+
+  .years-title {
     font-size: 0.9rem;
   }
 
@@ -532,6 +538,7 @@ svg .libra-path {
 
   .container-title-paragraph {
     margin: 2.2rem auto;
+    height: max-content;
   }
 
   .results_title {
@@ -541,22 +548,44 @@ svg .libra-path {
 
   .results_paragraph {
     font-size: 0.8rem;
+    margin-bottom: 1.9rem;
   }
 
   .container_repayments {
     padding: 0.9rem 1.1rem;
   }
 
+  .your_results {
+    padding: 0;
+  }
+
   .monthly_repayment {
-    padding: 0.8rem 0 1rem;
+    padding: 0.9rem 0 2rem;
   }
 
   .monthly_result {
-    font-size: 2.8rem;
+    font-size: 2.7rem;
   }
 
   .monthly_title {
     font-size: 0.8rem;
     font-weight: 500;
+  }
+
+  .container_over_term {
+    padding: 1.9rem 0 1rem;
+  }
+
+  .result-paragraph {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+
+  .result-title {
+    font-size: 1.1rem;
+  }
+
+  .figure-container {
+    width: 150px;
   }
 }
