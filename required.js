@@ -72,12 +72,18 @@ let interestCheck = () => {
 let typeCheck = () => {
   let inputRepayment = document.querySelector(".input_repayment"),
     inputInterest = document.querySelector(".input_interest"),
+    oneField = document.querySelector(".one_field"),
     interestRequired = document.querySelector(".interest-required");
 
-  if (!inputRepayment.checked & !inputInterest.checked) {
+  if (!inputRepayment.checked && !inputInterest.checked) {
     interestRequired.style.display = "block";
+    oneField.style.display = "none";
+  } else if (inputInterest.checked && inputRepayment.checked) {
+    interestRequired.style.display = "none";
+    oneField.style.display = "block";
   } else {
     interestRequired.style.display = "none";
+    oneField.style.display = "none";
   }
 };
 
@@ -97,13 +103,21 @@ let isChecked = () => {
   }
 };
 
+/* Clear all, clear inputs */
+
 /* Click on button to validate and send the form */
+
+let checkFunction = () => {
+  amountCheck();
+  termCheck();
+  interestCheck();
+  typeCheck();
+};
 
 let button = document
   .querySelector(".calculate_repayments_container")
   .addEventListener("click", () => {
-    amountCheck();
-    termCheck();
-    interestCheck();
-    typeCheck();
+    if (checkFunction() === true) {
+      console.log("validado");
+    }
   });

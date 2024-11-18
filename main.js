@@ -1,10 +1,22 @@
-/* Declare variables to use */
+let clearAll = () => {
+  let clearButton = document.querySelector(".clear"),
+    repaymentContainer = document.querySelector(".repayment-container"),
+    repaymentCheckbox = document.querySelector(".checkbox_repayment"),
+    interestContainer = document.querySelector(".interest-container"),
+    interestCheckbox = document.querySelector(".checkbox_interest");
 
-// let button = document.querySelector(".calculate-repayments"),
-//   interestContainer = document.querySelector(".interest-container"),
-//   inputsCheckbox = document.querySelector(".inputs-checkbox");
+  clearButton.addEventListener("click", () => {
+    repaymentContainer.style.border = "var(--border-inputs)";
+    repaymentContainer.style.backgroundColor = "var(--White)";
+    repaymentCheckbox.style.setProperty("--before-white-repayment", "#ffffff");
+    repaymentCheckbox.style.setProperty("--outline-repayment", "#6b94a8");
 
-// button.addEventListener("click", () => {});
+    interestContainer.style.border = "var(--border-inputs)";
+    interestContainer.style.backgroundColor = "var(--White)";
+    interestCheckbox.style.setProperty("--before-white-interest", "#ffffff");
+    interestCheckbox.style.setProperty("--outline-interest", "#6b94a8");
+  });
+};
 
 /* Function for REPAYMENTS input */
 
@@ -14,6 +26,8 @@ let checkRepayments = () => {
     repaymentCheckbox = document.querySelector(".checkbox_repayment");
 
   repaymentInput.addEventListener("click", () => {
+    repaymentInput.checked == true;
+
     if (repaymentInput.checked) {
       repaymentContainer.style.border = "1px solid var(--Lime)";
       repaymentContainer.style.backgroundColor = "var(--Lime-ligth)";
@@ -22,7 +36,8 @@ let checkRepayments = () => {
         "#d7da2f"
       );
       repaymentCheckbox.style.setProperty("--outline-repayment", "#d7da2f");
-    } else {
+    }
+    if (!repaymentInput.checked) {
       repaymentContainer.style.border = "var(--border-inputs)";
       repaymentContainer.style.backgroundColor = "var(--White)";
       repaymentCheckbox.style.setProperty(
@@ -47,7 +62,8 @@ let checkInterest = () => {
       interestContainer.style.backgroundColor = "var(--Lime-ligth)";
       interestCheckbox.style.setProperty("--before-white-interest", "#d7da2f");
       interestCheckbox.style.setProperty("--outline-interest", "#d7da2f");
-    } else {
+    }
+    if (!interestInput.checked) {
       interestContainer.style.border = "var(--border-inputs)";
       interestContainer.style.backgroundColor = "var(--White)";
       interestCheckbox.style.setProperty("--before-white-interest", "#ffffff");
@@ -56,5 +72,6 @@ let checkInterest = () => {
   });
 };
 
+clearAll();
 checkRepayments();
 checkInterest();

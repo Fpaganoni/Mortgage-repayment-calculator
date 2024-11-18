@@ -55,6 +55,13 @@ path {
   color: var(--Red);
 }
 
+.one_field {
+  display: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--Red);
+}
+
 /* Now give some styles to the sections divided in 5 div elements
 Calculator-container */
 
@@ -321,7 +328,7 @@ svg .libra-path {
   height: 100%;
   background-color: var(--Slate900);
   border: 1px solid var(--Slate900);
-  /* transform: translate(-100%); */
+  transform: translate(-100%);
 }
 
 .results {
