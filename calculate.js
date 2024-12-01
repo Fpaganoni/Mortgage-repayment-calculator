@@ -1,24 +1,27 @@
-let buttonCalculate = document.querySelector(".calculate_repayments_container"),
-  inputInterest = document.querySelector("#interest-only-input"),
-  inputTerm = document.querySelector(".term"),
-  inputAmount = document.querySelector(".amount"),
-  monthlyRepayment = document.querySelector(".monthly_result");
+let form = document.querySelector(".form");
 
-buttonCalculate.addEventListener("click", () => {
-  let amountResult = inputAmount.value,
-    interestResult = inputInterest.value,
-    termResult = inputTerm.value,
+form.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+
+  // Declaring variables to use and calculate
+  let amount = parseFloat(document.querySelector(".amount").value),
+    term = parseFloat(document.querySelector(".term").value) * 12,
+    interestNominal =
+      parseFloat(document.querySelector(".interest").value) / 12 / 100,
+    repaymentOnly = document.querySelector(".input_repayment"),
+    interestOnly = document.querySelector("input_interest"),
     monthlyRepayment = document.querySelector(".monthly_result");
 
-  let result = amountResult * interestResult;
+  // Variables to use in other cases
+  let resulltsContainer = document.querySelector(".your_result_container_all");
 
-  monthlyRepayment.innerHTML = `£${amountResult}`;
+  let calculate = () => {
+    let interestPow = Math.pow(interestNominal + 1, term);
+    let calculateInterest = interestPow * interestNominal;
+    let montlhyPayment = amount * (calculateInterest / (interestPow - 1));
+    resulltsContainer.style.transform = "translate(-100%)";
+    monthlyRepayment.innerHTML = `£${montlhyPayment.toFixed(2)}`;
+  };
+
+  calculate();
 });
-
-let amountResult = inputAmount.value,
-  interestResult = inputInterest.value,
-  termResult = inputTerm.value;
-
-let result = amountResult * interestResult;
-
-console.log(result);

@@ -25,7 +25,7 @@
       <div class="container">
         <form
           method="post"
-          class="container-calculator-results calculator-container"
+          class="container-calculator-results calculator-container form"
         >
           <div class="calculator-sections section-title">
             <h4 class="mortgage-title">Mortgage Calculator</h4>
@@ -96,7 +96,7 @@
               >
               <div class="input-interest-container">
                 <input
-                  type="number"
+                  type="float"
                   min="0"
                   class="interest equal-inputs"
                   id="interest-rate"
@@ -150,13 +150,13 @@
           </div>
 
           <div class="calculator-sections calculate_repayments_container">
-            <div type="submit" class="calculate-repayments">
+            <button type="submit" class="calculate-repayments">
               <img
                 src="/Mortgage-repayment-calculator/assets/images/icon-calculator.svg"
                 alt="calculator"
                 class="calculator-img"
               />Calculate Repayments
-            </div>
+            </button>
           </div>
         </form>
 
@@ -190,9 +190,10 @@
                 <div class="container_repayments">
                   <div class="monthly_repayment">
                     <h5 class="monthly_title">Your monthly repayments</h5>
-                    <span class="monthly_result" id="your_monthly_repayment"
-                      >£1,797.74</span
-                    >
+                    <span
+                      class="monthly_result"
+                      id="your_monthly_repayment"
+                    ></span>
                   </div>
                   <div class="container_over_term">
                     <h5 class="monthly_title">

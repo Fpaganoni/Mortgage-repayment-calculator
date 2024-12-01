@@ -328,7 +328,6 @@ svg .libra-path {
   height: 100%;
   background-color: var(--Slate900);
   border: 1px solid var(--Slate900);
-  transform: translate(-100%);
 }
 
 .results {
